@@ -10,11 +10,28 @@ class Provjera {
 	}
 
 	@Test
-	public void odStringaJavadobijamoJV()
+	public void odStringaTestdobijamo4()
+	{
+		
+		int check;
+		check=Main.duzinaStringa("Test");
+		assertEquals(4,check );
+	}
+	
+	@Test
+	public void odStringaTestdobijamoTs()
+	{
+		String check;
+		check=Main.karakteriNaParnimPozicijama("Test");
+		assertEquals("Ts", check);
+	}
+
+	@Test
+	public void odStringaJavadobijamoAA()
 	{
 		String string;
 		string=Main.karakteriNaNeparnimPozicijama("Java");
-		assertEquals("Jv", string);
+		assertEquals("aa", string);
 	}
 	
 	@Test
@@ -28,3 +45,4 @@ class Provjera {
 	
 	
 }
+

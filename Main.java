@@ -53,13 +53,28 @@ public class Main {
 	{
 		return null;
 	}
-	public static ArrayList<String>karakteriNaNeparnimPozicijama(String sc)
-	{
-		return null;
+	public static String karakteriNaNeparnimPozicijama(String sc)
+	{ String rijec="";
+		for (int i=0; i<sc.length(); i++)
+		{
+			if(i%2==0)
+			{
+				rijec=rijec+sc.charAt(i);
+			}
+		}	
+		return rijec;
 	}
 	public static int  brojVelikihSlova(String sc) 
 	{
-		return 0;
+		int brojac=0;
+		for (int i=0; i<sc.length(); i++)
+		{
+			if(Character.isUpperCase(sc.charAt(i)))
+			{
+				brojac++;
+			}
+		}	
+		return brojac;
 	}
 	public static int  brojMalihSlova(String sc) 
 	{

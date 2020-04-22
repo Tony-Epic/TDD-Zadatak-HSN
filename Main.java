@@ -18,27 +18,27 @@ public class Main {
 		
 		if(izbor == 1)
 		{
-			duzinaStringa(unos);
+			System.out.println(duzinaStringa(unos));
 		}
 		else if(izbor == 2)
 		{
-			karakteriNaParnimPozicijama(unos);
+			System.out.println(karakteriNaParnimPozicijama(unos));
 		}
 		else if(izbor == 3)
 		{
-			karakteriNaNeparnimPozicijama(unos);
+			System.out.println(karakteriNaNeparnimPozicijama(unos));
 		}
 		else if(izbor == 4)
 		{
-			brojVelikihSlova(unos);
+			System.out.println(brojVelikihSlova(unos));
 		}
 		else if(izbor == 5)
 		{
-			brojMalihSlova(unos);
+			System.out.println(brojMalihSlova(unos));;
 		}
 		else if(izbor == 6)
 		{
-			karakteriKojiNisuSlova(unos);
+			System.out.println(karakteriKojiNisuSlova(unos));;
 		}
 			
 		
@@ -46,18 +46,23 @@ public class Main {
 
 	public static int  duzinaStringa(String sc) 
 	{
-		return 0;
+		return sc.length();
 	}
 	
-	public static ArrayList<String>karakteriNaParnimPozicijama(String sc)
+	public static String karakteriNaParnimPozicijama(String sc)
 	{
-		return null;
+		String karakteri="";
+		for(int i=0;i<sc.length();i+=2)
+		{
+			karakteri=karakteri+sc.charAt(i);
+		}
+		return karakteri;
 	}
 	public static String karakteriNaNeparnimPozicijama(String sc)
 	{ String rijec="";
 		for (int i=0; i<sc.length(); i++)
 		{
-			if(i%2==0)
+			if(i%2!=0)
 			{
 				rijec=rijec+sc.charAt(i);
 			}
@@ -80,7 +85,7 @@ public class Main {
 	{
 		return 0;
 	}
-	public static ArrayList<String>karakteriKojiNisuSlova(String sc)
+	public static String karakteriKojiNisuSlova(String sc)
 	{
 		return null;
 	}

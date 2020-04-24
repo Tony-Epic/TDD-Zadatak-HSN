@@ -27,7 +27,7 @@ class Provjera {
 	}
 
 	@Test
-	public void odStringaJavadobijamoAA()
+	public void odStringaJavadobijamoJv()
 	{
 		String string;
 		string=Main.karakteriNaNeparnimPozicijama("Java");

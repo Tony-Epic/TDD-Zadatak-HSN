@@ -1,5 +1,4 @@
 
-
 import java.util.Scanner;
 
 public class Main {
@@ -56,9 +55,12 @@ public class Main {
 	public static String karakteriNaParnimPozicijama(String sc)
 	{
 		String karakteri="";
-		for(int i=0;i<sc.length();i+=2)
+		for(int i=0;i<sc.length();i++)
 		{
-			karakteri=karakteri+sc.charAt(i);
+			if(i%2!=0)
+			{
+				karakteri=karakteri+sc.charAt(i);
+			}
 		
 		}
 		return karakteri;
@@ -68,7 +70,7 @@ public class Main {
 		String rijec="";
 		for (int i=0; i<sc.length(); i++)
 		{
-			if(i%2!=0)
+			if(i%2==0)
 			{
 				rijec=rijec+sc.charAt(i);
 			}
@@ -105,6 +107,5 @@ public class Main {
 		
 		return karakteri;
 	}
-	
 
 }

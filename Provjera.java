@@ -19,11 +19,11 @@ class Provjera {
 	}
 	
 	@Test
-	public void odStringaTestdobijamoTs()
+	public void odStringaTestdobijamoes()
 	{
 		String check;
 		check=Main.karakteriNaParnimPozicijama("Test");
-		assertEquals("Ts", check);
+		assertEquals("et", check);
 	}
 
 	@Test
@@ -31,7 +31,7 @@ class Provjera {
 	{
 		String string;
 		string=Main.karakteriNaNeparnimPozicijama("Java");
-		assertEquals("aa", string);
+		assertEquals("Jv", string);
 	}
 	
 	@Test

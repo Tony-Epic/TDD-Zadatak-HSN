@@ -19,7 +19,7 @@ class Provjera {
 	}
 	
 	@Test
-	public void odStringaTestdobijamoes()
+	public void odStringaTestdobijamoEt()
 	{
 		String check;
 		check=Main.karakteriNaParnimPozicijama("Test");
@@ -27,7 +27,7 @@ class Provjera {
 	}
 
 	@Test
-	public void odStringaJavadobijamoAA()
+	public void odStringaJavadobijamoJv()
 	{
 		String string;
 		string=Main.karakteriNaNeparnimPozicijama("Java");

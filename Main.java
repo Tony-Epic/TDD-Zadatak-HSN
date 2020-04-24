@@ -1,9 +1,14 @@
-import java.util.ArrayList;
+
+
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
+		menu();
+	}
+
+	private static void menu() {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Unesite neki string : ");
 		String unos=input.nextLine();
@@ -18,29 +23,28 @@ public class Main {
 		
 		if(izbor == 1)
 		{
-			System.out.println(duzinaStringa(unos));
+			System.out.println("Duzina vaseg stringa je : "+duzinaStringa(unos));
 		}
 		else if(izbor == 2)
 		{
-			System.out.println(karakteriNaParnimPozicijama(unos));
+			System.out.println("Karakteri na parnim pozicijama su : "+karakteriNaParnimPozicijama(unos));
 		}
 		else if(izbor == 3)
 		{
-			System.out.println(karakteriNaNeparnimPozicijama(unos));
+			System.out.println("Karakteri na neparnim pozicijama su : "+karakteriNaNeparnimPozicijama(unos));
 		}
 		else if(izbor == 4)
 		{
-			System.out.println(brojVelikihSlova(unos));
+			System.out.println("Broj velikih slova je : "+brojVelikihSlova(unos));
 		}
 		else if(izbor == 5)
 		{
-			System.out.println(brojMalihSlova(unos));;
+			System.out.println("Broj malih slova je : "+brojMalihSlova(unos));;
 		}
 		else if(izbor == 6)
 		{
-			System.out.println(karakteriKojiNisuSlova(unos));;
+			System.out.println("Karakteri koji nisu slova su : "+karakteriKojiNisuSlova(unos));;
 		}
-			
 		
 	}
 
@@ -55,11 +59,13 @@ public class Main {
 		for(int i=0;i<sc.length();i+=2)
 		{
 			karakteri=karakteri+sc.charAt(i);
+		
 		}
 		return karakteri;
 	}
 	public static String karakteriNaNeparnimPozicijama(String sc)
-	{ String rijec="";
+	{ 
+		String rijec="";
 		for (int i=0; i<sc.length(); i++)
 		{
 			if(i%2!=0)
@@ -83,11 +89,21 @@ public class Main {
 	}
 	public static int  brojMalihSlova(String sc) 
 	{
-		return 0;
+		int brojac = 0;
+		for (int i = 0; i < sc.length(); i++) 
+			if (Character.isLowerCase(sc.charAt(i))) 
+				brojac++;
+		
+		return brojac;
 	}
 	public static String karakteriKojiNisuSlova(String sc)
 	{
-		return null;
+		String karakteri = "";
+		for (int i = 0; i < sc.length(); i++) 
+			if(!Character.isAlphabetic(sc.charAt(i)) && !Character.isWhitespace(sc.charAt(i)))
+				karakteri += sc.charAt(i);
+		
+		return karakteri;
 	}
 	
 
